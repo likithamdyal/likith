@@ -1,0 +1,624 @@
+#check if a number is perfect square or not
+
+n=int(input())
+i=1
+while 2**i<n:
+    i+=1
+if 2**i==n:
+    print("perfect square",n)
+else:
+    print("not a perfect square",n)
+
+Output:
+8
+perfect square 8
+            
+
+# armstrong number
+
+n=int(input())
+sum=0
+temp=n
+d=len(str(n))
+while temp>0:
+    digit=temp%10
+    sum+=digit**d
+    temp//=10
+if n==sum:
+    print(" armstrong number ",sum)
+else:
+    print(" not armstrong  number ",sum)
+
+Output:
+371
+Armstrong  number 371
+
+#given number is perfect or not
+
+n=int(input())
+p=0
+for i in range(1,n):
+    if n%i==0:
+        p=p+i
+    i+=1
+if p==n:
+    print("it is a perfect number")
+else:
+     print("it is a not perfect number")
+
+Output:
+6
+it is a perfect number    
+
+#  abudant number
+
+n=int(input())
+p=0
+for i in range(1,n):
+    if n%i==0:
+        p=p+i
+    i+=1
+if p>n:
+    print("it is a abundant number")
+else:
+     print("it is a not abundant number")
+
+Output:
+
+12
+it is a abundant number
+
+#slicing of number or character
+
+s=[1,2,3,4,5,6,7,8,9,10]
+a=s[1::2]
+b=s[-2::-2]
+c=[]
+c.extend(a)
+c.extend(b)
+print©
+
+Output:
+[2, 4, 6, 8, 10, 9, 7, 5, 3, 1]
+
+#slicing of number or character
+
+s=[1,2,3,4,5,6,7,8,9,10]
+a=s[2::3]
+b=s[1::2]
+c=[]
+c.extend(a)
+c.extend(b)
+print©
+
+Output:
+[1, 3, 5, 7, 9, 2, 4, 6, 8, 10]
+
+#given phone number is valid or not
+
+s=input()
+if len(s)==10:
+  if s[0]=="6" or s[0]== "7" or s[0]== "8" or s[0]== "9":
+      if s.isdigit():
+       print("valid")
+       exit
+      else:
+        print("invalid")
+else:
+    print("invalid")
+
+Output:                             output:
+9848k99917                       6281696802
+Invalid                                    valid
+        
+
+
+#right rotataion of number or character
+
+s=[1,2,3,4,5,6,7,8,9,10]
+n=int(input())
+if n>len(s):
+    n=n%len(s)                                 (compare)
+print(s[n::]+s[0:n:])
+
+Output:
+7
+[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]
+
+
+#left  rotataion of number or character
+
+s=[1,2,3,4,5,6,7,8,9,10]
+n=int(input())
+if n>len(s):
+    n=n%len(s)
+print(s[-n::]+s[0:-n:])
+
+Output:
+7
+[4, 5, 6, 7, 8, 9, 10, 1, 2, 3]
+
+
+#reverse a string
+
+s="hi i am naruto"
+print(s[::-1])
+
+Ouput:
+oturan ma i ih
+
+#reverse a statement  string
+
+s="hi i am naruto"
+l=list(s.split(" "))
+l=l[::-1]
+ans=" ".join(l)
+print(ans)
+
+Output:
+Naruto am  i  hi
+
+# reverse a statement
+
+s="hi i am naruto"
+l=list(s.split(" "))
+s=""
+for i in l:
+    s=s+i[::-1]+" "
+print(s)
+
+Output:
+
+ih i ma oturan
+
+# check if it is palindrome or not
+
+s=input()
+a=s[::-1]
+if s==a:
+    print("yes")
+else:
+    print("no")
+
+Output:
+madam
+yes
+
+
+#anagram or not
+s1=input()
+s2=input()
+s=set(s1)
+s0=set(s2)
+if s==s0:
+ for i in s:
+  if s1.count(i)!=s2.count(i):
+   print("not anagram")
+   break
+ else:
+   print("anagram") 
+else:
+    print("not  anagram ")
+
+Output:
+slient
+listen
+anagram
+
+#factorial of a number using recursion
+
+def fact(x):
+    if x==1:
+        returrn x
+    return x*fact(x-1)
+n=int(input())
+a=fact(n)
+print(a)
+
+Output:
+5
+120
+
+# factorial of a number using recursion in reverse order
+Def  fact(a,x):
+  if a==x:
+    return x
+  ret urn a*fact(a+1,x)
+n=int(input())
+a=fact(1,n)
+Print(a)
+
+Output:
+4
+24
+
+
+#fibonacci series
+def fib(x):
+ if x<=1:
+  return x
+return fib(x-1)+fib(x-2)
+n=int(input())
+a=fib(n)
+Print(a)
+
+Output:
+
+
+
+
+
+
+
+
+#reverse of a number using recursion
+def  rev(x,res):
+   if x<=0:
+     return res
+   rem=x%10
+   res=res*10+rem
+   return rev(x//10,res)
+n=int(input())
+Res=0
+a=rev(n,res)
+Print(a) 
+
+Output:
+121
+121
+
+Check wheather given number is power of 3:
+
+def power(i,x):
+    if 3**i==x:
+        return True
+    elif  3**i>=x:
+        return False
+    else:
+        return power(i+1,x)
+n=int(input())
+a=power(1,n)
+print(a)
+
+Output:
+9                                        21
+True                                   False
+
+
+
+
+Class and objects:
+Class is a user defined data type
+Or
+Class is a collection of objects( w.r.t objects)
+Attributes:
+Variables and functions
+
+Ex:->calling attributes inside the class
+class person:
+  nickname="kanna"
+  roll="21"
+  height="6"
+  def run(self):
+    print("my id is "+self.nickname + self.roll)
+nithin=person()     ->calling constructor
+nithin.run()
+
+Ex:-> calling  attributes inside the constructor   
+class person:
+  def __init__(self,x,y,z):            //->calling constructor
+    self.nickname=x
+    self.roll=y
+    self.height=z
+  def run(self):
+    print(" I can run", self.nickname , self.roll )
+kanna=person("nithin",49,6)
+ kanna.run()
+
+
+
+
+
+ABSTACTION:
+It has no body
+
+Ex:
+class person:
+  def mobile():
+     pass
+
+Ex: with inheritance
+class mobile:
+    def function(self):     #ABSTACTION
+        pass
+class realme(mobile):
+    def function(self):
+        print("hey i am realme")
+class oneplus(mobile):
+    def function(self):
+        print("hey i am oneplus")
+realme11x=realme()
+realme11x.function()
+oneplusnord=oneplus()
+oneplusnord.function()
+
+
+
+
+
+
+Declare private and protected variables:
+Private:  declaring variable
+
+Syntax:
+_variable=variablename
+
+Protected:
+
+Syntax:
+__variable=variablename
+
+Encapsulation:
+Using  private and protected variables in class
+
+Ex:by using encapsulation
+
+class car:
+    _engine="v8"
+    _wires="blue"
+    def getter(self):
+        print(self._engine)
+        print(self._wires)
+    def setter(self,engine,wires):
+        self._engine=engine
+        self._wires=wires
+bmw=car()
+bmw.setter("v9","red")
+bmw.getter()
+
+
+
+INHERITANCE:
+1.SINGLE INHERITANCE: 
+Class parents:
+  def coolness(self):
+    print("parents are cool")
+Class chlid(parents):
+  def coding(self):
+    print("I can do coding")
+Kanna=chlid()
+Kanna.coolness()
+Kanna.coding()
+
+  2.MULTILEVEL:
+
+Class parents:
+  def coolness(self):
+    print("parents are cool")
+Class chlid(parents):
+  def coding(self):
+    print("I can do coding")
+Class dog(child):
+  def eating(self):
+    print("I am kindful")
+Kanna=chlid()
+Kanna=dog()
+Kanna.coolness()
+Kanna.coding()
+Kanna.eating()
+
+
+
+3.MULTIPE INHERITANCE:
+
+class parents:
+  def coolness(self):
+    print("parents are cool")
+class chlid:
+  def coding(self):
+    print("I can do coding")
+class dog(parents,chlid):
+  def eating(self):
+    print("I am kindful")
+Kanna=dog()
+Kanna.coolness()
+Kanna.coding()
+Kanna.eating()
+
+4.HIERARCHICAL
+class parents:
+  def coolness(self):
+    print("parents are cool")
+class chlid(parents):
+  def coding(self):
+    print("I can do coding")
+class dog(parents):
+  def eating(self):
+    print("I am kindful")
+Kanna=chlid()
+Kanna.coolness()
+Kanna.coding()
+nk=dog()
+nk.coolness()
+nk.eating()
+
+
+5.HYBRID INHERITANCE
+
+class parents:
+  def coolness(self):
+    print("parents are cool")
+class chlid(parents):
+  def coding(self):
+    print("I can do coding")
+class dog(parents):
+  def eating(self):
+    print("I am kindful")
+class me(chlid,dog):
+    def power(self):
+        print("i am superhero")
+kn=me()
+kn.coolness()
+kn.coding()
+kn.eating()
+kn.power()
+
+
+POLYMORPHISM:
+TWO TYPES:
+1->overloading
+2->overridding
+
+Overloading:
+
+class solution:
+    def add(self,x,y):
+        print(x+y)
+class child(solution):
+    def add(self,x,y,z):
+        print(x+y+z)
+i=child()
+i.add(5,6,7)
+
+
+
+
+LINEAR SEARCH:
+
+L=[1,2,3,4,5,6,7,8,9,10]
+For I in l:
+   if  i==7:
+     print("found")
+      break
+Else:
+  print("not found")
+
+
+BINARY SEARCH:
+l=[9,7,78,10,5,1,0]
+l.sort()
+print(l)
+i=0
+j=len(l)-1
+s=7
+while i<j:
+    mid=(i+j)//2
+    if l[mid]==s:
+        print(mid,"found")
+        break
+    elif l[mid]>s:
+        j=mid-1
+    else:
+        i=mid+1
+else:
+    print("not found")
+Ouput:
+[0, 1, 5, 7, 9, 10, 78]
+3 found
+
+
+
+Big-O:
+It is used for time complexity
+
+O(n):
+It depends on total number of values(  worst  time complexity)
+
+O(1):
+Memory is fixed
+
+O(log n):
+Decreasing size to half
+
+Insertion sort:
+b=[9,4,6,3,8,10]
+for i in range(1,len(b)):
+    j=j-1
+    a=b[i]
+    while j>=0 and b[j]>a:
+        b[j+1]=b[j]
+        j=j-1
+    b[j+1]=a
+print(b)
+
+
+BUBBLE SORT:
+
+l=[9,7,78,10,5,1,0]
+for i in range(0,len(l)-1):
+    for j in range(0,len(l)-i-1):
+        if l[j]>l[j+1]:
+            l[j],l[j+1]=l[j+1],l[j]
+print(l)
+
+
+Selection sort:
+
+b=[1,3,2,4,5,7,6,9]
+for i in range(0,len(b)-1):
+    m=i
+    for j in range(i+1,len(b)):
+        if b[m]>=b[j]:
+            m=j
+    b[i],b[m]=b[m],b[j]
+print(b)
+
+
+Stack:
+
+class stack:
+    def __init__(self):
+        self.top=-1
+        self.size=5
+        self.list=[]:
+    def push(self):
+        if len(self.list)==5:
+            print("full")
+            return 0
+        self.top+=1
+        self.list.append(data)
+    def pop(self):
+        if len(self.list)==0:
+            print("empty")
+            return 0
+        self.top-=1
+        self.list.pop()
+    def peek(self):
+        print(self.list)
+        if len(self.list)==0
+           print("empty")
+           return 0
+        elif self.top>5:
+            print("out of index")
+        else:
+            print(self.list[self.top])
+s=stack()
+s.push(1)
+s.push(2)
+s.push(3)
+s.push(4)
+s.push(1)
+s.pop()
+s.peek()
+
+
+IMPLEMENTING QUEUE USING STACK
+
+l=[1,2,3,4]
+s=[]
+def pop():
+    for i in range(len(l)):
+        s.append(l.pop())
+    s.pop()
+    for i in range(len(s)):
+        l.append(s.pop())
+pop()
+pop()
+print(l)
+
+Output:
+[3,4]
+
+
+
+
